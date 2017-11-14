@@ -21,13 +21,16 @@ namespace PPEJouetAVSG
         {
             if (textBoxidentifiant.Text != "" && textBoxMDP.Text != "")
             {
-                Int32 existe = Passerelle.utilisateurExiste(textBoxidentifiant.Text, textBoxMDP.Text);
+                //Int32 existe = Passerelle.utilisateurExiste(textBoxidentifiant.Text, textBoxMDP.Text);
+
+                TypeutilisateurDAO type = new TypeutilisateurDAO();
+                Int32 existe = type.utilisateurExiste(textBoxidentifiant.Text, textBoxMDP.Text);
 
                 if (existe != 0)
                 {
                     string identifiant = textBoxidentifiant.Text;
                     string mdp = textBoxMDP.Text;
-                    Int32 typeUtilisateur = Passerelle.getTypeutilisateur(identifiant, mdp);
+                    Int32 typeUtilisateur = type.getTypeutilisateur(identifiant, mdp);
 
                     try
                     {

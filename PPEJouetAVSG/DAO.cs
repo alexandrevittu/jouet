@@ -11,7 +11,7 @@ namespace PPEJouetAVSG
 {
     abstract class DAO<T>
     {
-        private static SqlConnection laConnection = null;
+        public static SqlConnection laConnection = null;
         public static SqlConnection seConnecter()
         {
             if(laConnection == null)
@@ -49,6 +49,10 @@ namespace PPEJouetAVSG
         public abstract Boolean delete(T Object);
 
         public abstract List<T> find(Int32 id, Int32 id2);
+
+        public abstract Int32 utilisateurExiste(string id, string mdp);
+
+        public abstract Int32 getTypeutilisateur(string id, string mdp);
     }
     
 

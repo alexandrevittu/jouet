@@ -76,5 +76,15 @@ namespace PPEJouetAVSG
         {
             throw new NotImplementedException();
         }
+
+        public override int utilisateurExiste(string id, string mdp)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override int getTypeutilisateur(string id, string mdp)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

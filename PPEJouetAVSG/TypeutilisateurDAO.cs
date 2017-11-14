@@ -13,10 +13,6 @@ namespace PPEJouetAVSG
     {
         private Typeutilisateur typeuti;
 
-        public TypeutilisateurDAO(Typeutilisateur Puti)
-        {
-            typeuti = Puti;
-        }
         public override bool create(Typeutilisateur Object)
         {
             throw new NotImplementedException();
@@ -41,6 +37,37 @@ namespace PPEJouetAVSG
         public override List<Typeutilisateur> find(int id, int id2)
         {
             throw new NotImplementedException();
+        }
+
+        public override Int32 utilisateurExiste(string id, string mdp)
+        {
+
+            seConnecter();
+
+
+
+            SqlCommand maCommande;
+            string requete = "SELECT count(typePersonne) FROM Personne where nom ='" + id + "' AND MDP='" + mdp + "'";
+            maCommande = new SqlCommand(requete, laConnection);
+
+
+            int result = (int)maCommande.ExecuteScalar();
+
+            seDeconnecter();
+
+            return result;
+
+        }
+
+        public override Int32 getTypeutilisateur(string id, string mdp)
+        {
+            seConnecter();
+
+            SqlCommand maCommande;
+            string requete = "SELECT typePersonne FROM Personne where nom ='" + id + "' AND MDP='" + mdp + "'";
+            maCommande = new SqlCommand(requete, laConnection);
+            Int32 typeuti = (int)maCommande.ExecuteScalar();
+            return typeuti;
         }
     }
 }
