@@ -37,5 +37,10 @@ namespace PPEJouetAVSG
         {
             throw new NotImplementedException();
         }
+
+        public override List<Typeutilisateur> find(int id, int id2)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

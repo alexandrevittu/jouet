@@ -56,5 +56,10 @@ namespace PPEJouetAVSG
             throw new NotImplementedException();
         }
 
+        public override List<Trancheage> find(int id, int id2)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

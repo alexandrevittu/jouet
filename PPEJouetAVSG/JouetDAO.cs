@@ -72,5 +72,9 @@ namespace PPEJouetAVSG
             throw new NotImplementedException();
         }
 
+        public override Jouet find(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

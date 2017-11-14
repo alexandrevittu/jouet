@@ -47,6 +47,8 @@ namespace PPEJouetAVSG
         public abstract List<T> findAll();
         public abstract Boolean update(T Object);
         public abstract Boolean delete(T Object);
+
+        public abstract List<T> find(Int32 id, Int32 id2);
     }
     
 
