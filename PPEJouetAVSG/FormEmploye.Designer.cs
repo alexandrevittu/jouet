@@ -30,14 +30,17 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lbl_uti = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.lbl_uti = new System.Windows.Forms.Label();
+            this.cmb_enfant = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -68,9 +71,31 @@
             this.panel1.Size = new System.Drawing.Size(674, 556);
             this.panel1.TabIndex = 0;
             // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.lbl_uti);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(672, 33);
+            this.panel5.TabIndex = 0;
+            // 
+            // lbl_uti
+            // 
+            this.lbl_uti.AutoSize = true;
+            this.lbl_uti.Font = new System.Drawing.Font("OpenSymbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_uti.Location = new System.Drawing.Point(434, 4);
+            this.lbl_uti.Name = "lbl_uti";
+            this.lbl_uti.Size = new System.Drawing.Size(53, 19);
+            this.lbl_uti.TabIndex = 0;
+            this.lbl_uti.Text = "label1";
+            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.cmb_enfant);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(683, 3);
             this.panel2.Name = "panel2";
@@ -95,25 +120,23 @@
             this.panel4.Size = new System.Drawing.Size(210, 31);
             this.panel4.TabIndex = 3;
             // 
-            // panel5
+            // cmb_enfant
             // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.lbl_uti);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(672, 33);
-            this.panel5.TabIndex = 0;
+            this.cmb_enfant.FormattingEnabled = true;
+            this.cmb_enfant.Location = new System.Drawing.Point(17, 71);
+            this.cmb_enfant.Name = "cmb_enfant";
+            this.cmb_enfant.Size = new System.Drawing.Size(172, 21);
+            this.cmb_enfant.TabIndex = 0;
             // 
-            // lbl_uti
+            // label1
             // 
-            this.lbl_uti.AutoSize = true;
-            this.lbl_uti.Font = new System.Drawing.Font("OpenSymbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_uti.Location = new System.Drawing.Point(434, 4);
-            this.lbl_uti.Name = "lbl_uti";
-            this.lbl_uti.Size = new System.Drawing.Size(53, 19);
-            this.lbl_uti.TabIndex = 0;
-            this.lbl_uti.Text = "label1";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Caladea", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(31, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(158, 44);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Choisissez un jouet\r\n       par enfant";
             // 
             // FormEmploye
             // 
@@ -127,6 +150,8 @@
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -140,5 +165,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmb_enfant;
     }
 }

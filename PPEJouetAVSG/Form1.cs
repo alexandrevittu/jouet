@@ -76,6 +76,7 @@ namespace PPEJouetAVSG
         public TextBox TXT()
         {
             return textBoxidentifiant;
+
         }
     }
 }
