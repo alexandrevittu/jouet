@@ -26,6 +26,7 @@ namespace PPEJouetAVSG
             cmb_enfant.DataSource = afficheEnfant.findAll(id, mdp);
 
             cmb_enfant.DisplayMember = "Info";
+            cmb_enfant.ValueMember = "idEnfant";
         }
 
         private void btn_deco_Click(object sender, EventArgs e)
@@ -37,6 +38,30 @@ namespace PPEJouetAVSG
         {
             this.Hide();
            
+        }
+
+        private void cmb_enfant_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int val;
+            Int32.TryParse(cmb_enfant.SelectedValue.ToString(),out val);
+            TrancheageDAO trancheAge = new TrancheageDAO();
+            List<Trancheage> listTrancheAge = trancheAge.findAll();
+
+            //System.Windows.Forms.MessageBox.Show(val.ToString());
+
+            EnfantDAO unEnfant = new EnfantDAO();
+            int age = Int32.Parse(unEnfant.getAge(val));
+            int idTrancheAge;
+
+            foreach (Trancheage uneTrancheAge in listTrancheAge)
+            {
+                if (age > uneTrancheAge.getAgeMin() && age < uneTrancheAge.getAgeMin())
+                {
+                    idTrancheAge = uneTrancheAge.getCode();
+                }
+            }
+
+
         }
     }
 }

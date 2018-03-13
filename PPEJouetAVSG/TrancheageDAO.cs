@@ -40,7 +40,7 @@ namespace PPEJouetAVSG
 
             SqlDataReader Listtranche = maCommande.ExecuteReader();
 
-            while (Listtranche.Read())
+            while (Listtranche.Read())  
             {
                 Int32 id = (int)Listtranche["code"];
                 Int32 agemin = (int)Listtranche["TrancheAgeMin"];
@@ -75,6 +75,7 @@ namespace PPEJouetAVSG
         {
             throw new NotImplementedException();
         }
+
 
     }
 }

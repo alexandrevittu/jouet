@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmb_jouet = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmb_enfant = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.lbl_uti = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lbl_uti = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -41,6 +42,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cmb_jouet);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.cmb_enfant);
             this.panel1.Controls.Add(this.panel5);
@@ -49,6 +51,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(896, 599);
             this.panel1.TabIndex = 1;
+            // 
+            // cmb_jouet
+            // 
+            this.cmb_jouet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_jouet.FormattingEnabled = true;
+            this.cmb_jouet.Location = new System.Drawing.Point(355, 229);
+            this.cmb_jouet.Name = "cmb_jouet";
+            this.cmb_jouet.Size = new System.Drawing.Size(171, 21);
+            this.cmb_jouet.TabIndex = 2;
             // 
             // label1
             // 
@@ -62,11 +73,13 @@
             // 
             // cmb_enfant
             // 
+            this.cmb_enfant.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_enfant.FormattingEnabled = true;
             this.cmb_enfant.Location = new System.Drawing.Point(355, 163);
             this.cmb_enfant.Name = "cmb_enfant";
             this.cmb_enfant.Size = new System.Drawing.Size(172, 21);
             this.cmb_enfant.TabIndex = 0;
+            this.cmb_enfant.SelectedIndexChanged += new System.EventHandler(this.cmb_enfant_SelectedIndexChanged);
             // 
             // panel5
             // 
@@ -78,16 +91,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(894, 39);
             this.panel5.TabIndex = 0;
-            // 
-            // lbl_uti
-            // 
-            this.lbl_uti.AutoSize = true;
-            this.lbl_uti.Font = new System.Drawing.Font("OpenSymbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_uti.Location = new System.Drawing.Point(3, 7);
-            this.lbl_uti.Name = "lbl_uti";
-            this.lbl_uti.Size = new System.Drawing.Size(53, 19);
-            this.lbl_uti.TabIndex = 0;
-            this.lbl_uti.Text = "label1";
             // 
             // linkLabel1
             // 
@@ -102,6 +105,16 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Deconnexion";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // lbl_uti
+            // 
+            this.lbl_uti.AutoSize = true;
+            this.lbl_uti.Font = new System.Drawing.Font("OpenSymbol", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_uti.Location = new System.Drawing.Point(3, 7);
+            this.lbl_uti.Name = "lbl_uti";
+            this.lbl_uti.Size = new System.Drawing.Size(53, 19);
+            this.lbl_uti.TabIndex = 0;
+            this.lbl_uti.Text = "label1";
             // 
             // FormEmploye
             // 
@@ -127,6 +140,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lbl_uti;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.ComboBox cmb_jouet;
 
     }
 }

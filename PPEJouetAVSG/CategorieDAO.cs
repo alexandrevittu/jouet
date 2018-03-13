@@ -75,5 +75,19 @@ namespace PPEJouetAVSG
         {
             throw new NotImplementedException();
         }
+
+        public string getLibelleCat(int idCat)
+        {
+            string libelle;
+            SqlConnection laConnection = seConnecter();
+
+            SqlCommand maCommande;
+            string requete = "SELECT libelle FROM categorie WHERE id = "+idCat;
+            maCommande = new SqlCommand(requete, laConnection);
+
+            libelle = (string)maCommande.ExecuteScalar();
+            return libelle;
+        }
+
     }
 }

@@ -91,5 +91,36 @@ namespace PPEJouetAVSG
         {
             throw new NotImplementedException();
         }
+
+        public List<Jouet> jouetAge(int idTrancheAge)
+        {
+            List<Jouet> lesjouets = new List<Jouet>();
+            SqlConnection laConnection = seConnecter();
+
+            SqlCommand maCommande;
+            string requete = "SELECT * FROM Jouet WHERE idTrancheage =" + age; ;
+            maCommande = new SqlCommand(requete, laConnection);
+
+            SqlDataReader Listjouet = maCommande.ExecuteReader();
+
+            while (Listjouet.Read())
+            {
+
+                string libelle = (string)Listjouet["libelle"];
+                Int32 prix = (int)Listjouet["id"];
+                int idcatego = (int)Listjouet["idCategorie"];
+
+                CategorieDAO uneCatgorie = new CategorieDAO();
+                string libelleCat = uneCatgorie.getLibelleCat(idcatego);
+
+                TrancheageDAO uneTranche = new TrancheageDAO();
+                int ageMin = uneTranche.getAgeMin(idTrancheAge);
+                int ageMax = uneTranche.getAgeMax(idTrancheAge);
+                lesjouets.Add(new Jouet(libelle, prix, new Categorie(idcatego, libelleCat), new Trancheage(idTrancheAge, 10, 20)));
+            }
+            Listjouet.Close();
+            return lesjouets;
+            throw new NotImplementedException();
+        }
     }
 }
