@@ -53,6 +53,8 @@ namespace PPEJouetAVSG
         public abstract Int32 utilisateurExiste(string id, string mdp);
 
         public abstract Int32 getTypeutilisateur(string id, string mdp);
+
+        public abstract List<T> findAll(string id,string mdp);
     }
     
 

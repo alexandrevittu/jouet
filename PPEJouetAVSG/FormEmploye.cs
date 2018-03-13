@@ -19,6 +19,24 @@ namespace PPEJouetAVSG
 
 
             lbl_uti.Text = "Bonjour , Mr " + ((Form1)f).TXT().Text;
+            string id = ((Form1)f).TXT().Text;
+            string mdp = ((Form1)f).TXTMDP().Text;
+
+            EnfantDAO afficheEnfant = new EnfantDAO();
+            cmb_enfant.DataSource = afficheEnfant.findAll(id, mdp);
+
+            cmb_enfant.DisplayMember = "Info";
+        }
+
+        private void btn_deco_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+           
         }
     }
 }

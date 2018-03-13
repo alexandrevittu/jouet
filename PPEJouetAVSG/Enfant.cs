@@ -25,5 +25,10 @@ namespace PPEJouetAVSG
         {
             return age;
         }
+
+        public string Info
+        {
+            get { return "Numero de l'enfant : "+id + " -- Age : " + age; }
+        }
     }
 }

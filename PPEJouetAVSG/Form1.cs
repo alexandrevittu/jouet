@@ -78,5 +78,10 @@ namespace PPEJouetAVSG
             return textBoxidentifiant;
 
         }
+
+        public TextBox TXTMDP()
+        {
+            return textBoxMDP;
+        }
     }
 }

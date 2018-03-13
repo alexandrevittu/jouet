@@ -86,5 +86,10 @@ namespace PPEJouetAVSG
         {
             throw new NotImplementedException();
         }
+
+        public override List<Jouet> findAll(string id, string mdp)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

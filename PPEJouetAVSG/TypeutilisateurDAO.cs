@@ -69,5 +69,10 @@ namespace PPEJouetAVSG
             Int32 typeuti = (int)maCommande.ExecuteScalar();
             return typeuti;
         }
+
+        public override List<Typeutilisateur> findAll(string id, string mdp)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
