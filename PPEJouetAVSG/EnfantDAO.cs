@@ -79,14 +79,14 @@ namespace PPEJouetAVSG
             
         }
 
-        public string getAge(int id)
+        public int getAge(int id)
         {
             SqlConnection laConnection = seConnecter();
             SqlCommand laCommande;
-            String query = "SELECT age from Enfant where id = " + id + " ";
-
+            String query = "SELECT age from enfant where id = "+id;
+            int age;
             laCommande = new SqlCommand(query, laConnection);
-            string age = (string)laCommande.ExecuteScalar();
+            age = (int)laCommande.ExecuteScalar();
             return age;
         }
     }

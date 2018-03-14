@@ -76,6 +76,27 @@ namespace PPEJouetAVSG
             throw new NotImplementedException();
         }
 
+        public Int32 getAgeMin(int idTrancheAge)
+        {
+            SqlConnection laConnection = seConnecter();
+            SqlCommand maCommande;
+            string requete = "SELECT TrancheAgeMin FROM TrancheAge WHERE id = "+idTrancheAge;
+            maCommande = new SqlCommand(requete, laConnection);
 
+            int ageMin = (int)maCommande.ExecuteScalar();
+            return ageMin;
+
+        }
+
+        public Int32 getAgeMax(int idTrancheAge)
+        {
+            SqlConnection laConnection = seConnecter();
+            SqlCommand maCommande;
+            string requete = "SELECT TrancheAgeMax FROM TrancheAge WHERE id = " + idTrancheAge;
+            maCommande = new SqlCommand(requete, laConnection);
+
+            int ageMax = (int)maCommande.ExecuteScalar();
+            return ageMax;
+        }
     }
 }

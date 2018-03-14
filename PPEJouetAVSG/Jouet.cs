@@ -43,5 +43,10 @@ namespace PPEJouetAVSG
         {
             return trancheage;
         }
+
+        public string InfoJouet
+        {
+            get { return "Jouet : " + getLibelle() + " Prix : " + getPrix() + " Categorie : " + getcategorie().getLibelle() + " Tranche Age : " + gettrancheage().getAgeMin() + "-" + gettrancheage().getAgeMax(); }
+        }
     }
 }

@@ -50,8 +50,8 @@ namespace PPEJouetAVSG
             //System.Windows.Forms.MessageBox.Show(val.ToString());
 
             EnfantDAO unEnfant = new EnfantDAO();
-            int age = Int32.Parse(unEnfant.getAge(val));
-            int idTrancheAge;
+            int age = unEnfant.getAge(val);
+            int idTrancheAge = 0;
 
             foreach (Trancheage uneTrancheAge in listTrancheAge)
             {
@@ -60,6 +60,10 @@ namespace PPEJouetAVSG
                     idTrancheAge = uneTrancheAge.getCode();
                 }
             }
+
+            JouetDAO lesJouets = new JouetDAO();
+            cmb_jouet.DataSource = lesJouets.jouetAge(idTrancheAge);
+            cmb_jouet.DisplayMember = "InfoJouet";
 
 
         }

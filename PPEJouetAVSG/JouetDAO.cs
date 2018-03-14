@@ -98,7 +98,7 @@ namespace PPEJouetAVSG
             SqlConnection laConnection = seConnecter();
 
             SqlCommand maCommande;
-            string requete = "SELECT * FROM Jouet WHERE idTrancheage =" + age; ;
+            string requete = "SELECT * FROM Jouet WHERE idTrancheage =" + idTrancheAge; ;
             maCommande = new SqlCommand(requete, laConnection);
 
             SqlDataReader Listjouet = maCommande.ExecuteReader();
@@ -116,7 +116,7 @@ namespace PPEJouetAVSG
                 TrancheageDAO uneTranche = new TrancheageDAO();
                 int ageMin = uneTranche.getAgeMin(idTrancheAge);
                 int ageMax = uneTranche.getAgeMax(idTrancheAge);
-                lesjouets.Add(new Jouet(libelle, prix, new Categorie(idcatego, libelleCat), new Trancheage(idTrancheAge, 10, 20)));
+                lesjouets.Add(new Jouet(libelle, prix, new Categorie(idcatego, libelleCat), new Trancheage(idTrancheAge, ageMin, ageMax)));
             }
             Listjouet.Close();
             return lesjouets;
