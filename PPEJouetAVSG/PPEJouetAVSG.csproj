@@ -55,6 +55,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formaddemploye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formaddemploye.Designer.cs">
+      <DependentUpon>Formaddemploye.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formaddjouet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     <Compile Include="TypeutilisateurDAO.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formaddemploye.resx">
+      <DependentUpon>Formaddemploye.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formaddjouet.resx">
       <DependentUpon>Formaddjouet.cs</DependentUpon>

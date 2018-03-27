@@ -16,10 +16,10 @@ namespace PPEJouetAVSG
         private string adresse;
         private Int32 numerotel;
 
-        public Personne(Int32 Pid,string Pnom,string Pprenom, string PMDP,string Pcp,string Padresse,Int32 Pnumerotel)
+        public Personne(string Pnom,string Pprenom, string PMDP,string Pcp,string Padresse,Int32 Pnumerotel)
         {
             
-            id = Pid;
+            
             nom = Pnom;
             prenom = Pprenom;
             MDP = PMDP;
@@ -44,6 +44,10 @@ namespace PPEJouetAVSG
         public string getMDP()
         {
             return MDP;
+        }
+        public string getcp()
+        {
+            return cp;
         }
         public string getAdresse()
         {

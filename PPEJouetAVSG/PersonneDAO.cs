@@ -24,7 +24,11 @@ namespace PPEJouetAVSG
             maCommande2 = new SqlCommand(requete1, laConnection);
             num = (int)maCommande2.ExecuteScalar();
             num += 1;
-            string requete2 = "";
+            string requete2 = "insert into dbo.Personne values(" + num + ",'" + Object.getNom() + ",'" + Object.getPrenom() + ",'" + Object.getMDP() + ",'" + Object.getcp() + ",'" + Object.getAdresse() + ",'" + Object.getNumerotel() + ",'" + 2+")" ;
+            maCommande = new SqlCommand(requete2, laConnection);
+            int nb = maCommande.ExecuteNonQuery();
+
+            return true;
             throw new NotImplementedException();
         }
         public override bool delete(Personne Object)

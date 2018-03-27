@@ -27,9 +27,26 @@ namespace PPEJouetAVSG
 
         private void btnajouterjouet_Click(object sender, EventArgs e)
         {
-            Int32 prix;
+            Int32 prix = 0;
             string libelle = txtnomjouet.Text;
-            prix = Int32.Parse(txtprix.Text);
+
+            if (libelle == "")
+            {
+                MessageBox.Show("erreur de saisie du libelle !");
+                return;
+            }
+
+            try
+            {
+                prix = Int32.Parse(txtprix.Text);
+
+            }
+            catch
+            {
+                MessageBox.Show("erreur de saisie du prix !");
+                return;
+            }
+
 
             
 

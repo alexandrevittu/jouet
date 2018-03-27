@@ -17,7 +17,7 @@ namespace PPEJouetAVSG
             InitializeComponent();
         }
 
-        private void btneditlist_Click(object sender, EventArgs e)
+        private void btneditlist2_Click(object sender, EventArgs e)
         {
             this.Hide();
             Formaddjouet fenetrejouet = new Formaddjouet();
@@ -40,6 +40,41 @@ namespace PPEJouetAVSG
             fenetrejouetcategorie.ShowDialog();
             this.Show();
         }
+
+        private void btnaddemploye_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Formaddemploye fenetreajoutemploye = new Formaddemploye();
+            fenetreajoutemploye.ShowDialog();
+            this.Show();
+        }
+
+        private void editjouet_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Formaddjouet fenetrejouet = new Formaddjouet();
+            fenetrejouet.ShowDialog();
+            this.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormJouetCategorie fenetrejouetcategorie = new FormJouetCategorie();
+            fenetrejouetcategorie.ShowDialog();
+            this.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormRecapitulatif fenetrerecap = new FormRecapitulatif();
+            fenetrerecap.ShowDialog();
+            this.Show();
+
+        }
+
+        
 
     }
 }
