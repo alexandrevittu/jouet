@@ -9,6 +9,8 @@ namespace PPEJouetAVSG
     class Categorie
     {
         private Int32 id;
+        private string libelle;
+        private List<Jouet> lesJouets;
 
         public Int32 Id
         {
@@ -21,8 +23,7 @@ namespace PPEJouetAVSG
             get { return id+" "+libelle; }
             
         }
-        private string libelle;
-        private List<Jouet> lesJouets;
+
 
         public Categorie(Int32 Pid,string Plibelle)
         {

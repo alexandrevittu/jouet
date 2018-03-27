@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="slam2018JouetAVSGDataSet" targetNamespace="http://tempuri.org/slam2018JouetAVSGDataSet.xsd" xmlns:mstns="http://tempuri.org/slam2018JouetAVSGDataSet.xsd" xmlns="http://tempuri.org/slam2018JouetAVSGDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="slam2018JouetAVSGConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="slam2018JouetAVSGConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PPEJouetAVSG.Properties.Settings.GlobalReference.Default.slam2018JouetAVSGConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="enfantTableAdapter" GeneratorDataComponentClassName="enfantTableAdapter" Name="enfant" UserDataComponentName="enfantTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="slam2018JouetAVSGConnectionString (Settings)" DbObjectName="slam2018JouetAVSG.dbo.enfant" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idPersonne, idJouet FROM dbo.enfant</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idPersonne" DataSetColumn="idPersonne" />
+              <Mapping SourceColumn="idJouet" DataSetColumn="idJouet" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="slam2018JouetAVSGDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="slam2018JouetAVSGDataSet" msprop:Generator_UserDSName="slam2018JouetAVSGDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="enfant" msprop:Generator_TableClassName="enfantDataTable" msprop:Generator_TableVarName="tableenfant" msprop:Generator_TablePropName="enfant" msprop:Generator_RowDeletingName="enfantRowDeleting" msprop:Generator_RowChangingName="enfantRowChanging" msprop:Generator_RowEvHandlerName="enfantRowChangeEventHandler" msprop:Generator_RowDeletedName="enfantRowDeleted" msprop:Generator_UserTableName="enfant" msprop:Generator_RowChangedName="enfantRowChanged" msprop:Generator_RowEvArgName="enfantRowChangeEvent" msprop:Generator_RowClassName="enfantRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idPersonne" msprop:Generator_ColumnVarNameInTable="columnidPersonne" msprop:Generator_ColumnPropNameInRow="idPersonne" msprop:Generator_ColumnPropNameInTable="idPersonneColumn" msprop:Generator_UserColumnName="idPersonne" type="xs:int" />
+              <xs:element name="idJouet" msprop:Generator_ColumnVarNameInTable="columnidJouet" msprop:Generator_ColumnPropNameInRow="idJouet" msprop:Generator_ColumnPropNameInTable="idJouetColumn" msprop:Generator_UserColumnName="idJouet" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

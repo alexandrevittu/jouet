@@ -9,6 +9,8 @@ namespace PPEJouetAVSG
     class Trancheage
     {
         private Int32 code;
+        private Int32 TrancheAgeMin;
+        private Int32 TrancheAgeMax;
 
         public Int32 Code
         {
@@ -16,8 +18,7 @@ namespace PPEJouetAVSG
             set { code = value; }
         }
 
-        private Int32 TrancheAgeMin;
-        private Int32 TrancheAgeMax;
+
 
         public string info
         {

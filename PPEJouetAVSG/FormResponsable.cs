@@ -19,14 +19,27 @@ namespace PPEJouetAVSG
 
         private void btneditlist_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Formaddjouet fenetrejouet = new Formaddjouet();
             fenetrejouet.ShowDialog();
+            this.Show();
         }
 
         private void btnrecap_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormRecapitulatif fenetrerecap = new FormRecapitulatif();
             fenetrerecap.ShowDialog();
+            this.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormJouetCategorie fenetrejouetcategorie = new FormJouetCategorie();
+            fenetrejouetcategorie.ShowDialog();
+            this.Show();
+        }
+
     }
 }

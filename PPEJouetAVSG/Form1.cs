@@ -36,15 +36,27 @@ namespace PPEJouetAVSG
                     {
                         if (typeUtilisateur == 1)
                         {
+                            this.Hide();
                             FormEmploye fenetreEmploye = new FormEmploye();
-
                             fenetreEmploye.ShowDialog();
+                            this.Show();
+                            textBoxidentifiant.Text = "";
+                            textBoxMDP.Text = "";
+                            
 
                         }
                         else if (typeUtilisateur == 2)
                         {
+                            this.Hide();
                             FormResponsable fenetreReponsable = new FormResponsable();
                             fenetreReponsable.ShowDialog();
+                            this.Show();
+                            textBoxidentifiant.Text = "";
+                            textBoxMDP.Text = "";
+
+                            
+                            
+
                         }
                         else
                         {
